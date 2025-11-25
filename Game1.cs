@@ -6,13 +6,13 @@ using MonoGameLibrary.Graphics;
 
 namespace DungeonSlime;
 
-public class Game1 : Core
-{
-    //Texture region slime in the atlas
-    private TextureRegion _slime;
+public class Game1 : Core{
 
-    //Texture region bat in the atlas
-    private TextureRegion _bat;
+    //defines sprite slime
+    private Sprite _slime;
+
+    //defines bat sprite
+    private Sprite _bat;
     public Game1(): base("Dungeon Slime", 1280, 720, false)
     {
     
@@ -28,11 +28,13 @@ public class Game1 : Core
         //create a texture atlas from xml file
         TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas-definition.xml");
 
-        //retrieve slime
-        _slime = atlas.GetRegion("slime");
+        //create slime sprite
+        _slime = atlas.CreateSprite("slime");
+        _slime.Scale = new Vector2(4.0f, 4.0f);
 
-        //retrieve bat
-        _bat = atlas.GetRegion("bat");
+        //create bat sprite
+        _bat = atlas.CreateSprite("bat");
+        _bat.Scale = new Vector2(4.0f, 4.0f);
     }
 
     protected override void Update(GameTime gameTime)
@@ -51,9 +53,8 @@ public class Game1 : Core
 
         SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
         
-        _slime.Draw(SpriteBatch, Vector2.Zero, Color.White, 0.0f, Vector2.One, 4.0f, SpriteEffects.None, 0.0f);
-
-        _bat.Draw(SpriteBatch, new Vector2(_slime.Width * 4.0f + 10, 0), Color.White, 0.0f, Vector2.One, 4.0f, SpriteEffects.None, 1.0f);
+        _slime.Draw(SpriteBatch, Vector2.Zero);
+        _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
 
         SpriteBatch.End();
 
