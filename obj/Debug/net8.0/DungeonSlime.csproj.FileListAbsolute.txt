@@ -27,3 +27,5 @@
 /home/francisco/Projetos/monogame/DungeonSlime/obj/Debug/net8.0/DungeonSlime.genruntimeconfig.cache
 /home/francisco/Projetos/monogame/DungeonSlime/obj/Debug/net8.0/ref/DungeonSlime.dll
 /home/francisco/Projetos/monogame/DungeonSlime/bin/Debug/net8.0/Content/images/logo.xnb
+/home/francisco/Projetos/monogame/DungeonSlime/bin/Debug/net8.0/Content/images/atlas.xnb
+/home/francisco/Projetos/monogame/DungeonSlime/bin/Debug/net8.0/Content/images/atlas-definition.xml
