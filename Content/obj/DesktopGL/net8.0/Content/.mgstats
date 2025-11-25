@@ -1,4 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"/home/francisco/Projetos/monogame/DungeonSlime/Content/images/atlas-definition.xml","/home/francisco/Projetos/monogame/DungeonSlime/Content/bin/DesktopGL/Content/images/atlas-definition.xml","CopyItem","File",272,272,0.0482678
+"/home/francisco/Projetos/monogame/DungeonSlime/Content/images/atlas-definition.xml","/home/francisco/Projetos/monogame/DungeonSlime/Content/bin/DesktopGL/Content/images/atlas-definition.xml","CopyItem","File",895,895,0.0290999
 "/home/francisco/Projetos/monogame/DungeonSlime/Content/images/atlas.png","/home/francisco/Projetos/monogame/DungeonSlime/Content/bin/DesktopGL/Content/images/atlas.xnb","TextureProcessor","Texture2DContent",590,16469,1.3189913
 "/home/francisco/Projetos/monogame/DungeonSlime/Content/images/logo.png","/home/francisco/Projetos/monogame/DungeonSlime/Content/bin/DesktopGL/Content/images/logo.xnb","TextureProcessor","Texture2DContent",16734,311381,1.5457977

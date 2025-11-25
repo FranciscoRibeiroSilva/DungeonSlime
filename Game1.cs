@@ -8,11 +8,11 @@ namespace DungeonSlime;
 
 public class Game1 : Core{
 
-    //defines sprite slime
-    private Sprite _slime;
+    //defines animated sprite slime
+    private AnimatedSprite _slime;
 
-    //defines bat sprite
-    private Sprite _bat;
+    //defines animated bat sprite
+    private AnimatedSprite _bat;
     public Game1(): base("Dungeon Slime", 1280, 720, false)
     {
     
@@ -29,11 +29,11 @@ public class Game1 : Core{
         TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas-definition.xml");
 
         //create slime sprite
-        _slime = atlas.CreateSprite("slime");
+        _slime = atlas.CreateAnimatedSprite("slime-animation");
         _slime.Scale = new Vector2(4.0f, 4.0f);
 
         //create bat sprite
-        _bat = atlas.CreateSprite("bat");
+        _bat = atlas.CreateAnimatedSprite("bat-animation");
         _bat.Scale = new Vector2(4.0f, 4.0f);
     }
 
@@ -43,6 +43,10 @@ public class Game1 : Core{
             Exit();
 
         // TODO: Add your update logic here
+
+        //Atualize animations sprite
+        _slime.Update(gameTime);
+        _bat.Update(gameTime);
 
         base.Update(gameTime);
     }
